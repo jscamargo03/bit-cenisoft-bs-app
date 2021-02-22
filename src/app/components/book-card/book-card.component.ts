@@ -9,7 +9,7 @@ export class BookCardComponent implements OnInit {
   @Input() book: {
     _id: '',
     cover: '',
-    name: ''
+    name: '',
     unitValue: 0,
     description: ''
   };

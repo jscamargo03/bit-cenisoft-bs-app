@@ -11,4 +11,8 @@ export class BooksService {
   getAll() {
     return this.http.get('http://localhost:3000/books')
   }
+
+  getBookById(id){
+    return this.http.get('http://localhost:3000/books/'+id)
+  }
 }

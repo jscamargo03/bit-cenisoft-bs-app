@@ -1,1 +1,57 @@
-<p>book works!</p>
+<div class="container my-5">
+    <div class="row">
+        <h1 class="px-3 text-dark font-weight-bold">{{book?.name}}</h1>
+    </div>
+    <div class="row ">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img class="img-fluid" src="{{book?.cover}}" alt="book cover">
+        </div>
+        <div class="col-12 col-md-6 d-flex">
+
+            <div class="container d-flex flex-column justify-content-between">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-justify text-dark">{{book?.description}}</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="text-primary font-weight-bold">Valor unitario {{book?.unitValue |
+                                currency:'CLP':'symbol-narrow':'4.2-2'}}</p>
+                        </div>
+
+                    </div>
+                    <div class="row mb-3">
+
+                        <div class="col-6 col-md-3 d-flex align-items-center">
+                            <p class="m-0">Cantidad</p>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <form>
+                                <input class="form-control" [formControl]="quantity" value="1" type="number"
+                                    (change)="validateQuantity()" />
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="row border-top pt-3">
+                        <div class="col-6 text-primary d-flex align-items-center">
+                            <h4 class="m-0">Total {{total | currency:'CLP':'symbol-narrow':'4.2-2'}}</h4>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-info btn-lg">
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
