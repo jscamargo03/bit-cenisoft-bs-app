@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  isCollapse = true
 
   ngOnInit(): void {
+  }
+
+  toggleState() {
+    let foo = this.isCollapse;
+    this.isCollapse = !foo
   }
 
 }
